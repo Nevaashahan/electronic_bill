@@ -1,12 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Lombok.NET;
 
 namespace BillingSystem.Models
 {
+    [RequiredArgsConstructor]
     public class Transaction
     {
         [Key]
-        public int TransectionId { get; set; }
+        public int TransactionId { get; set; }
         [ForeignKey("Customer")]
         public string NIC { get; set; }
         public DateTime DateTime { get; set; }

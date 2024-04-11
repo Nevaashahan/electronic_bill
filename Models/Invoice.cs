@@ -1,8 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Lombok.NET;
 
 namespace BillingSystem.Models
 {
+    [RequiredArgsConstructor]
     public class Invoice
     {
         [Key]
@@ -31,6 +33,7 @@ namespace BillingSystem.Models
 
         [ForeignKey("NIC")]
         public Customer Customer { get; set; }
+        [ForeignKey("TransactionId")]
         public virtual ICollection<Transaction> Transactions { get; set; }
     }
 }
