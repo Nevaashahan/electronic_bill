@@ -1,24 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
+﻿using System.ComponentModel.DataAnnotations;
+using Lombok.NET;
 
 namespace BillingSystem.Models
 {
+    [RequiredArgsConstructor]
     public class Customer
     {
+        public Customer(string nic, string name, string? address, string phone, string? email, string? description)
+        {
+            NIC = nic;
+            Name = name;
+            Address = address;
+            Phone = phone;
+            Email = email;
+            Description = description;
+        }
+
         [Key]
-        private string NIC { get; set; }
-        private string Name { get; set; }
-        private string Address { get; set; }
-        private string Phone { get; set; }
-        private string Email { get; set; }
-        private string Discription { get; set; }
-        private int NoOfOrders { get; set; }
+        [MaxLength(12)]
+        public string NIC { get; set; }
+        public string Name { get; set; }
+        public string? Address { get; set; }
+        public string Phone { get; set; }
+        public string? Email { get; set; }
+        public string? Description { get; set; }
+        public int? NoOfOrders { get; set; }
         public CreditBalance CreditBalance { get; set; }
+        
         public virtual ICollection<Transaction> Transections { get; set; }
     }
 }

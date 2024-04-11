@@ -10,8 +10,10 @@ namespace BillingSystem.Models
 {
     public class CreditBalance
     {
+        [Key]
         public int Id { get; set; }
-        public Customer Customer { get; set; }
+        [ForeignKey("Customer")]
+        public string NIC { get; set; }
         [DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Balance { get; set; }
