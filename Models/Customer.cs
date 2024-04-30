@@ -4,7 +4,7 @@ using Lombok.NET;
 namespace BillingSystem.Models
 {
     [RequiredArgsConstructor]
-    public class Customer
+    public partial class Customer
     {
         public Customer(string nic, string name, string? address, string phone, string? email, string? description)
         {

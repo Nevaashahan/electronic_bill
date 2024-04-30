@@ -5,7 +5,7 @@ using Lombok.NET;
 namespace BillingSystem.Models
 {
     [RequiredArgsConstructor]
-    public class Transaction
+    public partial class Transaction
     {
         [Key]
         public int TransactionId { get; set; }

@@ -126,3 +126,4 @@ D:\Projects_Test\Projects\For_Client\BillingSystem\obj\Debug\net8.0-windows\refi
 D:\Projects_Test\Projects\For_Client\BillingSystem\obj\Debug\net8.0-windows\BillingSystem.pdb
 D:\Projects_Test\Projects\For_Client\BillingSystem\obj\Debug\net8.0-windows\BillingSystem.genruntimeconfig.cache
 D:\Projects_Test\Projects\For_Client\BillingSystem\obj\Debug\net8.0-windows\ref\BillingSystem.dll
+D:\Projects_Test\Projects\For_Client\BillingSystem\bin\Debug\net8.0-windows\Lombok.NET.dll
